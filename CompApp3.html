@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ung Dung may tinh 3</title>
+</head>
+<body>
+<form id="frmCalculate" name="calculate">
+    <input type="text" id="txtExpression" name="exp"> <br>
+    <button type="button" id="btnopen" value="(" onclick="calculate.exp.value += '(';">(</button>
+    <button type="button" id="btnclose" value=")" onclick="calculate.exp.value += ')';">)</button>
+    <button type="button" id="btnmod" value="%" onclick="calculate.exp.value += '%';">%</button>
+    <button type="button" id="btnreset" value="AC" onclick="calculate.exp.value = null;">AC</button><br>
+    <button type="button" id="btn7" value="7" onclick="calculate.exp.value += '7';">7</button>
+    <button type="button" id="btn8" value="8" onclick="calculate.exp.value += '8';">8</button>
+    <button type="button" id="btn9" value="9" onclick="calculate.exp.value += '9';">9</button>
+    <button type="button" id="div" value="div" onclick="calculate.exp.value += '/';">/</button><br>
+
+    <button type="button" id="btn4" value="4" onclick="calculate.exp.value += '4';">4</button>
+    <button type="button" id="btn5" value="5" onclick="calculate.exp.value += '5';">5</button>
+    <button type="button" id="btn6" value="6" onclick="calculate.exp.value += '6';">6</button>
+    <button type="button" id="btnmul" value="x" onclick="calculate.exp.value += '*';">*</button> <br>
+
+    <button type="button" id="btn3" value="3" onclick="calculate.exp.value += '3';">3</button>
+    <button type="button" id="btn2" value="2" onclick="calculate.exp.value += '2';">2</button>
+    <button type="button" id="btn1" value="1" onclick="calculate.exp.value += '1';">1</button>
+    <button type="button" id="btnsub" value="-" onclick="calculate.exp.value += '-';">-</button> <br>
+
+    <button type="button" id="btn0" value="0" onclick="calculate.exp.value += '0';">0</button>
+    <button type="button" id="btndot" value="." onclick="calculate.exp.value += '.';">.</button>
+    <button type="button" id="btne" value="=" onclick="calculate.exp.value = eval(calculate.exp.value);">=</button>
+    <button type="button" id="btns" value="+" onclick="calculate.exp.value += '+';">+</button> <br>
+
+</form>
+</body>
+</html>
