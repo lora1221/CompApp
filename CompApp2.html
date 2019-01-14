@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ung Dung May Tinh2</title>
+</head>
+<body>
+<form>
+    <h1>Calculator</h1>
+    <input id="money1" type="text">
+    <input id="money2" type="text">
+    <br>
+    <button id="add" type="button" onclick="calculate(this);">Addition(+)</button>
+    <button id="sub" type="button" onclick="calculate(this);">Subtraction(-)</button>
+    <button id="mul" type="button" onclick="calculate(this);">Multiplication(X)</button>
+    <button id="div" type="button" onclick ="calculate(this);">Division(/)</button>
+    <br>
+    <h4 id="result"></h4>
+    <script>
+        function calculate(obj){
+            var a = parseFloat(document.getElementById("money1").value);
+            var b = parseFloat(document.getElementById("money2").value);
+            var option = obj.id;
+            alert(option);
+            var result;
+            if (option == "add") {
+                result = a + b;
+                document.getElementById("result").innerHTML = "Result Addition: " + result;
+            } else if (option == "sub") {
+                result = a - b;
+                document.getElementById("result").innerHTML = "Result Subtraction: " + result;
+            } else if (option == "mul") {
+                result = a * b;
+                document.getElementById("result").innerHTML = "Result Multiplication: " + result;
+            } else {
+                if (b == 0) {
+                    alert("Error! A number can't be divided by 0");
+                } else {
+                    result = a / b;
+                    document.getElementById("result").innerHTML = "Result Division: " + result;
+                }
+            }
+        }
+    </script>
+</form>
+</body>
+</html>
